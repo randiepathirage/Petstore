@@ -1,4 +1,7 @@
 # PetStore Application
+### SCS3203 / IS3108 Middleware Architecture - JavaEE Assignment with a mini project
+### P.D.R.Thathsaranie - 18001701
+
 
 ## Introduction
 
@@ -21,6 +24,10 @@ To run the application:
 The application can be also packaged using simple:
 
     ./gradlew build
+    
+> **_NOTE:_** In Windows machine use 
+
+    gradlew.bat build
 
 It produces the `quarkus-run.jar` file in the `build/quarkus-app/` directory.
 Be aware that it is not an _??ber-jar_ as the dependencies are copied into the `build/quarkus-app/lib/` directory.
