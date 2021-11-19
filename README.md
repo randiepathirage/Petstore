@@ -40,6 +40,12 @@ To launch the test page, open browser at the following URL
 
     http://localhost:8080/index.html
 
+## Swagger UI
+Once the application is build and running, can open the swagger UI using following URL
+
+     http://localhost:8080/swagger-ui/
+
+
 ## Running the application in dev mode
 
 You can run your application in dev mode that enables live coding using:
@@ -89,3 +95,4 @@ Go to deploy floder and run
 Open “Quarkus Microprofile Metrics” dashboard
 
     http://localhost:3000/dashboards
+    
