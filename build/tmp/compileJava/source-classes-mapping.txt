@@ -22,9 +22,9 @@ com/example/petstore/PetstoreRestApplication.java
  com.example.petstore.PetstoreRestApplication
 com/example/petstore/resilient/ResilienceController.java
  com.example.petstore.resilient.ResilienceController
-com/example/petstore/pet/PetController.java
- com.example.petstore.pet.PetController
-com/example/petstore/petType/PetType.java
- com.example.petstore.petType.PetType
 com/example/petstore/health/ServiceLiveHealthCheck.java
  com.example.petstore.health.ServiceLiveHealthCheck
+com/example/petstore/petType/PetType.java
+ com.example.petstore.petType.PetType
+com/example/petstore/pet/PetController.java
+ com.example.petstore.pet.PetController

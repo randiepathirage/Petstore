@@ -22,14 +22,21 @@ public class Pet {
 	@JsonProperty("pet_age")
 	private Integer petAge;
 
+
+	public Pet() {
+	}
+
+	public Pet(String petType, String petName, Integer petAge) {
+		this.petType = petType;
+		this.petName = petName;
+		this.petAge = petAge;
+	}
+
 	public Pet(Integer petId, String petType, String petName, Integer petAge) {
 		this.petId = petId;
 		this.petType= petType;
 		this.petName = petName;
 		this.petAge = petAge;
-	}
-
-	public Pet() {
 	}
 
 	public Integer getPetId() {

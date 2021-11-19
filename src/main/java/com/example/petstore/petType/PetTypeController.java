@@ -1,10 +1,14 @@
 package com.example.petstore.petType;
 
-import com.example.petstore.pet.Pet;
-import com.example.petstore.pet.PetData;
+
+import org.eclipse.microprofile.openapi.annotations.media.Content;
+import org.eclipse.microprofile.openapi.annotations.media.Schema;
 import org.eclipse.microprofile.openapi.annotations.parameters.RequestBody;
+import org.eclipse.microprofile.openapi.annotations.responses.APIResponse;
+import org.eclipse.microprofile.openapi.annotations.responses.APIResponses;
 
 import javax.ws.rs.*;
+import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.List;
 
@@ -15,6 +19,8 @@ public class PetTypeController {
     List<PetType> types = PetTypeData.getInstance();
 
     // get all the pet types in list....................................
+    @APIResponses(value = {
+            @APIResponse(responseCode = "200", description = "All Pet Types", content = @Content(mediaType = MediaType.APPLICATION_JSON, schema = @Schema(ref = "Pet_Type")))})
     @GET
     public Response getTypes() {
         System.out.println(types.get(1).getPetType());
@@ -22,6 +28,11 @@ public class PetTypeController {
     }
 
     //add new pet type to the list........................................
+    @APIResponses( value = {
+            @APIResponse( responseCode = "200", description = "All pet Types", content = @Content(
+                    mediaType = MediaType.APPLICATION_JSON
+            ) )
+    } )
     @POST
     public Response addType(@RequestBody (required = true) PetType type) {
         types.add(type);
@@ -29,6 +40,9 @@ public class PetTypeController {
     }
 
     //update  pet type ...................................................
+    @APIResponses(value = {
+            @APIResponse(responseCode = "200", description = "Pet type for id", content = @Content(mediaType = MediaType.APPLICATION_JSON)),
+            @APIResponse(responseCode = "404", description = "Pet type Id is not found")})
     @PUT
     @Path("{typeId}")
     public Response updateType(
@@ -56,6 +70,9 @@ public class PetTypeController {
     }
 
     //delete pet type....................................................
+    @APIResponses(value = {
+            @APIResponse(responseCode = "200", description = "pet type Id deleted"),
+            @APIResponse(responseCode = "404", description = "Pet type Id is not found")})
     @DELETE
     @Path("{typeId}")
     public Response getPets( @PathParam("typeId") int petTypeId) {
@@ -72,6 +89,6 @@ public class PetTypeController {
             return Response.ok("Successfuly deleted pet type "+ petTypeId).build();
         }
 
-        return Response.ok("Cant find the pet type Id "+petTypeId).build();
+        return Response.status(204, " Error can't find the pet type Id "+ petTypeId).build();
     }
 }

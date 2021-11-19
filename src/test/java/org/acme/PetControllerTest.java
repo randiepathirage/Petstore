@@ -15,7 +15,7 @@ public class PetControllerTest {
 	@Test
     public void testPetEndpoint() {
         given()
-          .when().get("/v1/pets")
+          .when().get("/pets")
           .then()
              .statusCode(200);
 //             .body(hasItem(
