@@ -96,3 +96,45 @@ Open “Quarkus Microprofile Metrics” dashboard
 
     http://localhost:3000/dashboards
     
+## CURL/WGET commands
+
+### Pets scheme
+
+View all the pets 
+
+    curl -X GET "http://localhost:8080/pets" -H  "accept: application/json"
+
+
+Add a new pet to the system
+
+    curl -X POST "http://localhost:8080/pets" -H  "accept: application/json" -H  "Content-Type: */*" -d "{\"pet_age\":0,\"pet_id\":0,\"pet_name\":\"string\",\"pet_type\":\"string\"}"
+   
+Search pet 
+
+    curl -X GET "http://localhost:8080/pets/find?petAge=-1&petId=-1&petName=null&petType=null" -H  "accept: application/json"
+
+Update pet
+
+    curl -X PUT "http://localhost:8080/pets/1" -H  "accept: application/json" -H  "Content-Type: */*" -d "{\"pet_age\":0,\"pet_id\":0,\"pet_name\":\"string\",\"pet_type\":\"string\"}"
+    
+Delete pet
+
+    curl -X DELETE "http://localhost:8080/pets/1" -H  "accept: */*"
+
+### Pet types scheme
+
+Get pet types
+
+    curl -X GET "http://localhost:8080/types" -H  "accept: application/json"
+    
+Add new pet type
+
+    curl -X POST "http://localhost:8080/types" -H  "accept: application/json" -H  "Content-Type: */*" -d "{\"pet_type\":\"string\",\"pet_type_id\":0}"
+    
+Update pet type
+
+    curl -X PUT "http://localhost:8080/types/1" -H  "accept: application/json" -H  "Content-Type: */*" -d "{\"pet_type\":\"string\",\"pet_type_id\":0}"
+    
+Delete pet type
+
+    curl -X DELETE "http://localhost:8080/types/1" -H  "accept: */*"
