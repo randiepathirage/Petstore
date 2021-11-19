@@ -1,2 +1,11 @@
+org/acme/PetTypeControllerTest.java
+ org.acme.PetTypeControllerTest
+ org.acme.PetTypeControllerTest$1
+ org.acme.PetTypeControllerTest$2
+ org.acme.PetTypeControllerTest$3
 org/acme/PetControllerTest.java
  org.acme.PetControllerTest
+ org.acme.PetControllerTest$1
+ org.acme.PetControllerTest$2
+ org.acme.PetControllerTest$3
+ org.acme.PetControllerTest$4

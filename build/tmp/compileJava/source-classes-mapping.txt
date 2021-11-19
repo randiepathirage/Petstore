@@ -2,18 +2,17 @@ com/example/petstore/metric/MetricController.java
  com.example.petstore.metric.MetricController
 com/example/petstore/pet/Pet.java
  com.example.petstore.pet.Pet
-com/example/petstore/pet/PetData.java
- com.example.petstore.pet.PetData
- com.example.petstore.pet.PetData$1
+com/example/petstore/pet/PetController.java
+ com.example.petstore.pet.PetController
 com/example/petstore/secure/TestSecureController.java
  com.example.petstore.secure.TestSecureController
 com/example/petstore/health/ServiceReadyHealthCheck.java
  com.example.petstore.health.ServiceReadyHealthCheck
-com/example/petstore/petType/PetTypeController.java
- com.example.petstore.petType.PetTypeController
-com/example/petstore/petType/PetTypeData.java
- com.example.petstore.petType.PetTypeData
- com.example.petstore.petType.PetTypeData$1
+com/example/petstore/petType/PetType.java
+ com.example.petstore.petType.PetType
+com/example/petstore/pet/PetData.java
+ com.example.petstore.pet.PetData
+ com.example.petstore.pet.PetData$1
 com/example/petstore/secure/MPJWTToken.java
  com.example.petstore.secure.MPJWTToken
 com/example/petstore/config/ConfigTestController.java
@@ -24,7 +23,8 @@ com/example/petstore/resilient/ResilienceController.java
  com.example.petstore.resilient.ResilienceController
 com/example/petstore/health/ServiceLiveHealthCheck.java
  com.example.petstore.health.ServiceLiveHealthCheck
-com/example/petstore/petType/PetType.java
- com.example.petstore.petType.PetType
-com/example/petstore/pet/PetController.java
- com.example.petstore.pet.PetController
+com/example/petstore/petType/PetTypeController.java
+ com.example.petstore.petType.PetTypeController
+com/example/petstore/petType/PetTypeData.java
+ com.example.petstore.petType.PetTypeData
+ com.example.petstore.petType.PetTypeData$1
